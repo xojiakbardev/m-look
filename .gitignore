@@ -1,0 +1,25 @@
+# Env
+.env
+.env.local
+.env.production
+.env.test
+.env.development
+
+# Docker
+docker-compose.override.yml
+docker-compose.prod.yml
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local data
+postgres_container

@@ -1,0 +1,27 @@
+services:
+  backend:
+    image: hojiakbar2806/m-look_backend
+    container_name: m-look-backend
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      - APP_ENV=production
+      - DEBUG=False
+      - RUN_ON_POSTGRES=True
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: hojiakbar2806/m-look_frontend
+    container_name: m-look-frontend
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api}
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
