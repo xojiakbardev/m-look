@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.sqlite3
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Env files
+.env
+.env.local
+.env.production
+.env.test
+.env.development
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# FastAPI static/media
+/static/
+/media/
+
+# Alembic
+alembic/versions/*.pyc
+alembic/versions/*.pyo
+alembic/versions/*.pyd
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Postgres
+postgres_container
